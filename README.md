@@ -1,0 +1,1 @@
+# Python-Mini-Project-Speech-Emotion-Recognition-with-librosa
