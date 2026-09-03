@@ -17,6 +17,10 @@ def extract_feature(file_name, mfcc, chroma, mel):
         # Get the sample rate of the audio
         sample_rate = sound_file.samplerate
         
+        if X.ndim > 1:
+            X = X.mean(axis=1)
+        
+        
         # Compute the Short-Time Fourier Transform (STFT) if chroma features are needed
         if chroma:
             stft = np.abs(librosa.stft(X))
